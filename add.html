@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Postr</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@600&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+ 
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+  
+
+    body{
+      font-family: "Noto Sans JP", sans-serif;
+      padding:0;
+      margin:0;
+    }
+    
+
+    a:hover {
+      color: #00ffff;
+    }
+.post {  padding: 0.1em 0; border-bottom:30px;}
+        .name { padding: 0.1em 0;color:rgb(0, 0, 0); font-size:15px; display:flex;}
+      .role{
+        color:#008550;
+        font-weight:bold;
+      }
+   .triangle1 {
+  width: 0;
+  height: 0;
+  border-top: 18px solid #00aaaa;
+  border-bottom: 18px solid #00aaaa;
+  border-left: 25px solid #000000; /* ← ここで色を指定 */
+}
+ .triangle2 {
+  width: 0;
+  height: 0;
+  border-top: 18px solid #000000;
+  border-bottom: 18px solid #000000;
+  border-left: 25px solid #00aaaa; /* ← ここで色を指定 */
+}
+   .triangle3 {
+  width: 0;
+  height: 0;
+  border-top: 18px solid #00aaaa;
+  border-bottom: 18px solid #00aaaa;
+  border-left: 25px solid #000000; /* ← ここで色を指定 */
+}
+ 
+nav {
+    
+      background-color:#000000;
+     
+    }
+
+    /* メニューリスト */
+    nav ul {
+      list-style: none;
+      margin:0;
+      padding:0;
+
+      display: flex; /* 横並び */
+    }
+
+    /* 各メニュー項目 */
+    nav ul li{
+     
+      height:35px;
+      line-height: 33px;
+    }
+    .a{
+      
+       background:#000000;
+    }
+    .b{
+      
+      background:#00aaaa;
+    }
+     .c{
+
+       background:#000000;
+    }
+    .d{
+
+      background:#00aaaa;
+    }
+    /* リンクのスタイル */
+    nav ul li a {
+      
+      
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* ホバー時 */
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+    
+      .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* スマホ用 */
+    input{
+      border-radius:0px;
+      padding:0px;
+      
+    }
+    form { margin-bottom: 1em; display:flex;}
+    textarea{
+      border-radius:0px;
+      width:300px;
+      resize:none;
+    }
+    .menu{
+      
+      gap:30px;
+      display:flex;
+    }
+    .logo{
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+
+    
+    
+    footer {
+      font-family: "Urbanist", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      margin-top:0px;
+      
+      background: var(--footer-bg);
+      color: white;;
+      padding: 0rem 1rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+
+      max-width: 1100px;
+      
+    }
+
+    .footer-brand img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .footer-brand h3 {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+    }
+
+    .footer-brand p {
+      margin: 0.2rem 0 1rem;
+      font-weight: bold;
+    }
+
+    
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-links a {
+      color: white;;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-social a {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+    .footer-social a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      text-align: right;
+      font-size: 0.85rem;
+      margin-top: 1.5rem;
+      background:black;
+      border-top: 1px solid #ffffff;
+      padding-top: 0.5rem;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom:0px;
+    }
+     header, footer {
+      height:100vh;
+      background: #000000;
+      text-align: center;
+      padding: 0px;
+     
+    }
+    .frank {
+      text-align: center;
+      margin-bottom: 0px;
+      font-family: "Mozilla Text", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      margin-top:-60px;
+      font-size: clamp(5rem, 25vw, 16rem);
+      color: #ffffff;
+      font-weight: bold;
+    }
+    button{
+      border-radius:0px;
+    }
+    .frank-footer {
+      text-align: center;
+      margin-bottom: 0px;
+      font-family: "Mona Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      margin-top: 0px;
+      font-size: clamp(4rem, 18vw, 20rem);
+      color: #ffffff;
+      
+    }
+.con header {
+  overflow: hidden;
+      display: flex;              /* 横並びにする */
+      align-items: center;        /* 縦方向を中央揃え */
+      background: #000000;
+      padding: 0px;
+      font-weight: bold;
+    }
+    .con header img {
+      width: 100%;                /* アイコンやロゴサイズ */
+      height: 100%;
+      object-fit: cover;          /* 枠にフィットさせる（切り抜き） */
+      display: block;
+    }
+  </style>
+</head>
+<body>
+ <nav>
+    <button class="menu-toggle">☰</button>
+    <ul>
+      <li class="a"><a href="#home">スレッド一覧</a></li>
+      <li><div class="triangle1"></div></li>
+      <li class="b"><a href="#about">ホーム</a></li>
+      <li><div class="triangle2"></div></li>
+      
+    </ul>
+  </nav>
+<div class="menu"><a href="">スレタイ検索</a><a href="">リロード</a><a href="{{ url_for('create_thread') }}">スレ立て</a></div>
+  <h1>新しいスレッドを作成</h1>
+<form method="post">
+  <select name="category">
+  <option value="雑談">雑談</option>
+  <option value="技術">技術</option>
+  <option value="質問">質問</option>
+  <option value="その他">その他</option>
+</select>
+
+  <input type="text" name="title" placeholder="スレッドタイトル" required>
+  <button type="submit">作成</button>
+</form>
+
+  <div class="menu"><a href="">リロード</a><a href="/">ホームへ</a></div>
+  
+     <footer>
+    <h1 class="frank-footer">Postr<img src="https://keitagames.com/logo.svg" class="logo"/></h1>
+    <div class="footer-container">
+       
+      <!-- ブランド -->
+      
+
+      <!-- ナビゲーション -->
+      <div class="footer-links">
+        <h4>link</h4>
+        <ul>
+          <li><a href="https://github.com/frank-community">GitHub</a></li>
+          <li><a href="https://discord.gg/KfZkcCGeUh">Discord</a></li>
+        
+        </ul>
+      </div>
+
+      <!-- その他 -->
+      <div class="footer-links">
+      
+
+      <!-- SNS -->
+      <div class="footer-social">
+        <h4>connect</h4>
+        <a href="https://x.com/tech_keitagames">X @tech_keitagames</a>
+       
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Frank Dev Community. All rights reserved.
+    </div>
+  </footer>
+  
+</body>
+</html>
